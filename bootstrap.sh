@@ -88,7 +88,7 @@ mv composer.phar /usr/local/bin/composer
 cd /var/www
 composer install --dev
 # Set up the database
-echo "CREATE DATABASE IF NOT EXISTS bnb" | mysql -uroot
-echo "GRANT ALL ON bnb.* TO 'yourad6_public'@'localhost' IDENTIFIED BY 'associ8s*'" | mysql -uroot
+echo "CREATE DATABASE IF NOT EXISTS darts" | mysql -uroot
+echo "GRANT ALL ON darts.* TO 'darts'@'localhost' IDENTIFIED BY 'dtwd!#dQ'" | mysql -uroot
 # Set up the database
 php artisan migrate
