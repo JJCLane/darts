@@ -1,21 +1,48 @@
-## Laravel PHP Framework
+# Darts
 
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/version.png)](https://packagist.org/packages/laravel/framework) [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.png)](https://packagist.org/packages/laravel/framework) [![Build Status](https://travis-ci.org/laravel/framework.png)](https://travis-ci.org/laravel/framework)
+**Darts** is a web app for calculating scores, tracking history and assiting with multiple darts games.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+## Requirements
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+* VirtualBox - Free virtualization software [Downloads](https://www.virtualbox.org/wiki/Downloads)
+* Vagrant - Tool for working with virtualbox images [Vagrant Home](https://downloads.vagrantup.com)
+* Git - Source Control Management [Downloads](http://git-scm.com/downloads)
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## Installation
 
-## Official Documentation
+- Clone darts repo   
+  `git clone https://github.com/JJCLane/darts.git`  
+  `cd darts`
+- Run vagrant   
+   `vagrant up`
+- Wait while it pulls in everything necessary (this can take a while the first time)
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
 
-### Contributing To Laravel
+## Usage
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+- Navigate to [http://localhost:8080](http://localhost:8080)
+- SSH access (use putty for Windows see below)   
+   `vagrant ssh`
+- Shut down virtual machine   
+   `vagrant halt`
 
-### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+### SSH access (Windows putty)
+
+- Locate ssh private key   
+   `C:\Users\example_user\.vagrant.d\insecure_private_key`
+- Load ssh private key in [puttygen](http://the.earth.li/~sgtatham/putty/latest/x86/puttygen.exe)   
+   Select all files if you cannot find it
+- Click `Save private key`   
+   Press `Yes` if it asks about saving without a password  
+   Save it anywhere (though the same folder makes sense)
+- Open [putty](http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe) and enter details displayed when using ssh command   
+   `vagrant ssh`
+- In the left categories section navigate to   
+   `Connection > SSH > Auth`
+- Click on browse and select the private key generated earlier
+- Now you can connect by pressing open at the bottom
+- If you would like this to be saved for next time   
+   Navigate back to `Session`  
+   Give it a name  
+   Click on save
